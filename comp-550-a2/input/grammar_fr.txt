@@ -1,0 +1,111 @@
+S -> PR-1Sg VP-1Sg | PR-2Sg VP-2Sg | PR-3Sg VP-3Sg
+S -> PR-1Pl VP-1Pl | PR-2Pl VP-2Pl | PR-3Pl VP-3Pl
+S -> NP-Sg VP-3Sg | NP-Pl VP-3Pl
+S -> NP
+
+NP-Sg-Masc-Det -> N-Sg-Masc | PN-Sg-Masc-Det
+NP-Sg-Fem-Det -> N-Sg-Fem | PN-Sg-Fem-Det
+NP-Pl-Masc-Det -> N-Pl-Masc | PN-Pl-Masc-Det
+NP-Pl-Fem-Det -> N-Pl-Fem | PN-Pl-Fem-Det
+
+NP-Sg-Masc-NoDet -> PN-Sg-Masc-NoDet
+NP-Sg-Fem-NoDet -> PN-Sg-Fem-NoDet
+NP-Pl-Masc-NoDet -> PN-Pl-Masc-NoDet
+NP-Pl-Fem-NoDet -> PN-Pl-Fem-NoDet
+
+NP-Sg-Det -> DT-Sg-Masc NP-Sg-Masc-Det | DT-Sg-Fem NP-Sg-Fem-Det
+NP-Sg-Det -> DT-Sg-Masc A-Before-Sg-Masc NP-Sg-Masc-Det | DT-Sg-Fem A-Before-Sg-Fem NP-Sg-Fem-Det
+NP-Sg-Det -> DT-Sg-Masc NP-Sg-Masc-Det A-After-Sg-Masc | DT-Sg-Fem NP-Sg-Fem-Det A-After-Sg-Fem
+NP-Sg-Det -> DT-Sg-Masc A-Before-After-Sg-Masc NP-Sg-Masc-Det | DT-Sg-Fem A-Before-After-Sg-Fem NP-Sg-Fem-Det
+NP-Sg-Det -> DT-Sg-Masc NP-Sg-Masc-Det A-Before-After-Sg-Masc | DT-Sg-Fem NP-Sg-Fem-Det A-Before-After-Sg-Fem
+
+NP-Pl-Det -> DT-Pl NP-Pl-Masc-Det | DT-Pl NP-Pl-Fem-Det
+NP-Pl-Det -> DT-Pl A-Before-Pl-Masc NP-Pl-Masc-Det | DT-Pl A-Before-Pl-Fem NP-Pl-Fem-Det
+NP-Pl-Det -> DT-Pl NP-Pl-Masc-Det A-After-Pl-Masc | DT-Pl NP-Pl-Fem-Det A-After-Pl-Fem
+NP-Pl-Det -> DT-Pl A-Before-After-Pl-Masc NP-Pl-Masc-Det | DT-Pl A-Before-After-Pl-Fem NP-Pl-Fem-Det
+NP-Pl-Det -> DT-Pl NP-Pl-Masc-Det A-Before-After-Pl-Masc | DT-Pl NP-Pl-Fem-Det A-Before-After-Pl-Fem
+
+NP-Sg-NoDet -> NP-Sg-Masc-NoDet | NP-Sg-Fem-NoDet
+NP-Sg-NoDet -> A-Before-Sg-Masc NP-Sg-Masc-NoDet | A-Before-Sg-Fem NP-Sg-Fem-NoDet
+NP-Sg-NoDet -> NP-Sg-Masc-NoDet A-After-Sg-Masc | NP-Sg-Fem-NoDet A-After-Sg-Fem
+NP-Sg-NoDet -> A-Before-After-Sg-Masc NP-Sg-Masc-NoDet | A-Before-After-Sg-Fem NP-Sg-Fem-NoDet
+NP-Sg-NoDet -> NP-Sg-Masc-NoDet A-Before-After-Sg-Masc | NP-Sg-Fem-NoDet A-Before-After-Sg-Fem
+
+NP-Pl-NoDet -> NP-Pl-Masc-NoDet | NP-Pl-Fem-NoDet
+NP-Pl-NoDet -> A-Before-Pl-Masc NP-Pl-Masc-NoDet | A-Before-Pl-Fem NP-Pl-Fem-NoDet
+NP-Pl-NoDet -> NP-Pl-Masc-NoDet A-After-Pl-Masc | NP-Pl-Fem-NoDet A-After-Pl-Fem
+NP-Pl-NoDet -> A-Before-After-Pl-Masc NP-Pl-Masc-NoDet | A-Before-After-Pl-Fem NP-Pl-Fem-NoDet
+NP-Pl-NoDet -> NP-Pl-Masc-NoDet A-Before-After-Pl-Masc | NP-Pl-Fem-NoDet A-Before-After-Pl-Fem
+
+NP-Sg -> NP-Sg-Det | NP-Sg-NoDet
+NP-Pl -> NP-Pl-Det | NP-Pl-NoDet
+
+NP -> NP-Sg | NP-Pl
+
+VP-1Sg -> V-1Sg NP | PR-COD V-1Sg | NE V-1Sg PAS NP | NE PR-COD V-1Sg
+VP-2Sg -> V-2Sg NP | PR-COD V-2Sg | NE V-2Sg PAS NP | NE PR-COD V-2Sg
+VP-3Sg -> V-3Sg NP | PR-COD V-3Sg | NE V-3Sg PAS NP | NE PR-COD V-3Sg
+VP-1Pl -> V-1Pl NP | PR-COD V-1Pl | NE V-1Pl PAS NP | NE PR-COD V-1Pl
+VP-2Pl -> V-2Pl NP | PR-COD V-2Pl | NE V-2Pl PAS NP | NE PR-COD V-2Pl
+VP-3Pl -> V-3Pl NP | PR-COD V-3Pl | NE V-3Pl PAS NP | NE PR-COD V-3Pl
+
+N-Sg-Masc -> "chat" | "poisson"
+N-Pl-Masc -> "chats" | "poissons"
+N-Sg-Fem -> "television" | "semaine"
+N-Pl-Fem -> "televisions" | "semaines"
+N-Sg -> N-Sg-Masc | N-Sg-Fem
+N-Pl -> N-Pl-Masc | N-Pl-Fem
+
+PN-Sg-Masc-NoDet -> "Jonathan" | "Montreal"
+PN-Sg-Fem-NoDet -> "Lucy"
+PN-Sg-Masc-Det -> "Canada"
+PN-Sg-Fem-Det -> "France"
+PN-Det -> DT-Masc PN-Sg-Masc-Det | DT-Fem PN-Sg-Fem-Det
+PN -> PN-NoDet | PN-Det
+
+PR-1Sg -> "je"
+PR-2Sg -> "tu"
+PR-3Sg -> "il" | "elle" | "on"
+PR-1Pl -> "nous"
+PR-2Pl -> "vous"
+PR-3Pl -> "ils" | "elles"
+PR-Sg -> PR-1Sg | PR-2Sg | PR-3Sg
+PR-Pl -> PR-1Pl | PR-2Pl | PR-3Pl
+PR -> PR-Sg | PR-Pl
+PR-COD -> "me" | "te" | "le" | "la" | "nous" | "vous" | "les"
+
+V-1Sg -> "mange" | "aime" | "regarde" | "cherche"
+V-2Sg -> "manges" | "aimes" | "regardes" | "cherches"
+V-3Sg -> "mange" | "aime" | "regarde" | "cherche"
+V-1Pl -> "mangons" | "aimons" | "regardons" | "cherchons"
+V-2Pl -> "mangez" | "aimez" | "regardez" | "cherchez"
+V-3Pl -> "mangent" | "aiment" | "regardent" | "cherchent"
+
+V-1Sg -> "mange" | "aime" | "regarde" | "cherche"
+V-2Sg -> "manges" | "aimes" | "regardes" | "cherches"
+V-3Sg -> "mange" | "aime" | "regarde" | "cherche"
+V-1Pl -> "mangons" | "aimons" | "regardons" | "cherchons"
+V-2Pl -> "mangez" | "aimez" | "regardez" | "cherchez"
+V-3Pl -> "mangent" | "aiment" | "regardent" | "cherchent"
+
+DT-Sg-Masc -> "le"
+DT-Sg-Fem -> "la"
+DT-Pl -> "les"
+
+A-After-Sg-Masc -> "noir" | "heureux"
+A-After-Pl-Masc -> "noirs" | "heureux"
+A-After-Sg-Fem -> "noire" | "heureuse"
+A-After-Pl-Fem -> "noires" | "heureuses"
+
+A-Before-Sg-Masc -> "joli" | "beau"
+A-Before-Pl-Masc -> "jolis" | "beaux"
+A-Before-Sg-Fem -> "jolie" | "belle"
+A-Before-Pl-Fem -> "jolies" | "belles"
+
+A-Before-After-Sg-Masc -> "dernier"
+A-Before-After-Pl-Masc -> "derniers"
+A-Before-After-Sg-Fem -> "derniere"
+A-Before-After-Pl-Fem -> "dernieres"
+
+NE -> "ne"
+PAS -> "pas"

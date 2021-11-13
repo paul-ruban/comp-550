@@ -1,0 +1,12 @@
+S -> NP VP
+VP -> V NP PP
+VP -> V NP
+VP -> VP PP
+NP -> N
+NP -> Det N
+NP -> Det N PP
+PP -> "in" NP
+N -> "I" | "elephant" | "pyjamas"
+NP -> "I"
+V -> "shot"
+Det -> "my" | "the"
